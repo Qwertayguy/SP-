@@ -9,6 +9,8 @@ public class buttonScript : MonoBehaviour
     public GameObject Door;
     DoorScript doorScript;
     bool activator;
+    public AudioSource source;
+    public AudioClip clip;
 
     void Start()
     {
@@ -21,13 +23,20 @@ public class buttonScript : MonoBehaviour
         if (other.tag == "HeayCube")
         {
             transform.position = point2.position;
+            source.PlayOneShot(clip);
             doorScript.Activator = true;
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        transform.position = point1.position;
-        doorScript.Activator = false;
+        if (other.tag == "HeayCube")
+        {
+            transform.position = point1.position;
+            source.PlayOneShot(clip);
+            doorScript.Activator = false;
+        }
     }
+
+    
 }
