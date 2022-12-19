@@ -34,9 +34,15 @@ public class example : MonoBehaviour
 
     }
 
+    void OnMouseDown()
+    {
+        mZCoord = Camera.main.WorldToScreenPoint(gameObject.transform.position).z;
+
+        // Store offset = gameobject world pos - mouse world pos
+        mOffset = gameObject.transform.position - GetMouseAsWorldPoint();
+    }
 
 
-    
 
 
 
@@ -58,14 +64,11 @@ public class example : MonoBehaviour
 
         // Convert it to world points
 
-        return Camera.main.ScreenToWorldPoint(mousePoint) + player.position + Vector3.Normalize(transform.position - player.position) * Mathf.Min(3, Vector3.Magnitude(transform.position - player.position));
+        return Camera.main.ScreenToWorldPoint(mousePoint) + player.position + Vector3.Normalize(transform.position - player.position) * Mathf.Min(0, Vector3.Magnitude(transform.position - player.position));
 
     }
 
-    void Update()
-    {
-        var Distance = transform.position - Go.transform.position;
-    }
+    
 
 
 
@@ -73,8 +76,8 @@ public class example : MonoBehaviour
     void OnMouseDrag()
 
     {
-        
-        GetComponent<Rigidbody>().AddForce((Go.transform.position - transform.position) * ForcePower * Time.smoothDeltaTime);
+
+        transform.position = GetMouseAsWorldPoint() + mOffset;
         objectRigidbody.drag = 5;
         outline.OutlineColor = Color.green;
     }
