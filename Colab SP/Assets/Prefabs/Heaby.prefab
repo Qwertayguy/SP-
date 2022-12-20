@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 298166338527902482}
   - component: {fileID: 298166338527902492}
   - component: {fileID: 5516308242305786315}
+  - component: {fileID: 1958994720657815779}
   m_Layer: 0
   m_Name: Heaby
   m_TagString: HeayCube
@@ -174,3 +175,16 @@ MonoBehaviour:
   Tran: {fileID: 298166338527902486}
   Go: {fileID: 0}
   ForcePower: 0
+--- !u!114 &1958994720657815779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298166338527902493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 429e3745529dee047a2ebd6b5a6f9bb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  me: {fileID: 298166338527902493}
