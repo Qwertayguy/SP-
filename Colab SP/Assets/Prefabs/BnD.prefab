@@ -306,7 +306,6 @@ GameObject:
   - component: {fileID: 9011681968538621640}
   - component: {fileID: 9011681968538621641}
   - component: {fileID: 9011681968538621646}
-  - component: {fileID: 9011681968538621643}
   m_Layer: 8
   m_Name: Top
   m_TagString: HeayCube
@@ -390,24 +389,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &9011681968538621643
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9011681968538621644}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMode: 4
-  outlineColor: {r: 0.36862746, g: 0.36862746, b: 0.36862746, a: 1}
-  outlineWidth: 2
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
 --- !u!1 &9011681969105284611
 GameObject:
   m_ObjectHideFlags: 0
@@ -466,7 +447,6 @@ GameObject:
   - component: {fileID: 9011681969120005936}
   - component: {fileID: 9011681969120005937}
   - component: {fileID: 9011681969120005942}
-  - component: {fileID: 9011681969120005939}
   m_Layer: 8
   m_Name: Side
   m_TagString: HeayCube
@@ -550,24 +530,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &9011681969120005939
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9011681969120005940}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMode: 4
-  outlineColor: {r: 0.36862746, g: 0.36862746, b: 0.36862746, a: 1}
-  outlineWidth: 2
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
 --- !u!1 &9011681969151946188
 GameObject:
   m_ObjectHideFlags: 0
@@ -580,7 +542,6 @@ GameObject:
   - component: {fileID: 9011681969151946184}
   - component: {fileID: 9011681969151946185}
   - component: {fileID: 9011681969151946190}
-  - component: {fileID: 9011681969151946187}
   m_Layer: 8
   m_Name: Side
   m_TagString: HeayCube
@@ -664,24 +625,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &9011681969151946187
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9011681969151946188}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMode: 4
-  outlineColor: {r: 0.36862746, g: 0.36862746, b: 0.36862746, a: 1}
-  outlineWidth: 2
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
 --- !u!1 &9011681969157374994
 GameObject:
   m_ObjectHideFlags: 0
@@ -742,6 +685,8 @@ MonoBehaviour:
   point1: {fileID: 9011681969889492684}
   point2: {fileID: 9011681968344359201}
   Door: {fileID: 9011681969105284611}
+  source: {fileID: 0}
+  clip: {fileID: 0}
 --- !u!1 &9011681969192057084
 GameObject:
   m_ObjectHideFlags: 0
@@ -910,7 +855,6 @@ GameObject:
   - component: {fileID: 9011681969394042007}
   - component: {fileID: 9011681969394042004}
   - component: {fileID: 9011681969394042005}
-  - component: {fileID: 9011681969394042001}
   m_Layer: 8
   m_Name: Viseble Door
   m_TagString: HeayCube
@@ -1008,24 +952,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 9011681969105284610}
   c: 0.1
---- !u!114 &9011681969394042001
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9011681969394042011}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMode: 3
-  outlineColor: {r: 0.3679245, g: 0.3679245, b: 0.3679245, a: 1}
-  outlineWidth: 6
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
 --- !u!1 &9011681969889492685
 GameObject:
   m_ObjectHideFlags: 0
