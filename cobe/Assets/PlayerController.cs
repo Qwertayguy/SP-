@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        
     }
 
     // Update is called once per frame
@@ -31,6 +32,22 @@ public class PlayerController : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         isColliding = true;
+
+        if(collision.gameObject.tag == ("Bad") && moveSpeed == 5)
+        {
+            Destroy(gameObject);
+        }
+
+        if(collision.gameObject.tag == ("Bad") && moveSpeed == 6)
+        {
+            Destroy(collision.gameObject);
+        }
+
+        if(collision.gameObject.tag == ("PowerUp"))
+        {
+            moveSpeed = 6;
+             
+        }
     }
 
     private void OnCollisionExit(Collision collision)
