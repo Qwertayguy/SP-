@@ -18,13 +18,13 @@ public class OrbitPlayerPointMouse : MonoBehaviour
 
     private void Start()
     {
-        
+        Cursor.lockState = CursorLockMode.Locked;
     }
     void Update()
     {
         turn.x += Input.GetAxis("Mouse X");
         turn.y += Input.GetAxis("Mouse Y");
-        turn.y = Mathf.Clamp(turn.y, -4f, 4f);
+        turn.y = Mathf.Clamp(turn.y, -21f, 21f);
         transform.localRotation = Quaternion.Euler(turn.y * y, turn.x * x, 0f);
         pivot.transform.rotation = transform.rotation;
 
