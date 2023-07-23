@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class OrbitPlayerPointMouse : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class OrbitPlayerPointMouse : MonoBehaviour
     public float maxViewAngle;
     public float minViewAngle;
 
+    bool EscLock;
+
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -28,6 +31,16 @@ public class OrbitPlayerPointMouse : MonoBehaviour
         transform.localRotation = Quaternion.Euler(turn.y * y, turn.x * x, 0f);
         pivot.transform.rotation = transform.rotation;
 
+        if (Time.timeScale == 1f)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.None;
+        }
+
+        
 
     }
 
