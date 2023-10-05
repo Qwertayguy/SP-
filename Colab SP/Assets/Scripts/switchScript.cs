@@ -11,11 +11,13 @@ public class switchScript : MonoBehaviour
     public AudioClip clip;
     bool down;
     public Behaviour plat;
+    Outline outline;
+    public GameObject Viseble;
 
     void Start()
     {
         plat.enabled = false;
-
+        outline = Viseble.GetComponent<Outline>();
     }
 
     private void OnMouseUpAsButton()
@@ -26,6 +28,7 @@ public class switchScript : MonoBehaviour
             source.PlayOneShot(clip);
             down = true;
             plat.enabled = true;
+            outline.OutlineColor = Color.green;
         }
         else if (down == true)
         {
@@ -33,6 +36,7 @@ public class switchScript : MonoBehaviour
             source.PlayOneShot(clip);
             down = false;
             plat.enabled = false;
+            outline.OutlineColor = Color.black;
         }
     }
 

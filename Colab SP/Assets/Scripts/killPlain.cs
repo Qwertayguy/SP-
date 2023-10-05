@@ -18,12 +18,4 @@ public class killPlain : MonoBehaviour
         check = false;
     }
 
-    private void Update()
-    {
-        if (check == true)
-        {
-            player.transform.position = respawn_point.transform.position;
-            Debug.Log("happened");
-        }
-    }
 }
